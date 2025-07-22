@@ -76,4 +76,4 @@ jobs:
 
     - name: Push Docker image
       run: |
-        docker push ${{ secrets.DOCKER_USERNAME}}/devops-diploma-2025-app:latest
+        docker push ${{ secrets.DOCKER_USERNAME}}/devops-diploma-2025-app:latest 
