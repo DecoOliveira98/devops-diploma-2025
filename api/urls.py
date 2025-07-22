@@ -1,15 +1,11 @@
-from django.urls import re_path, include
-from .views import book_view, health_view
+from django.urls import path, include
+from rest_framework.routers import DefaultRouter
+from .views import BookViewSet, HealthView
 
-app_name = 'api'
+router = DefaultRouter()
+router.register(r'books', BookViewSet, basename='books')
 
 urlpatterns = [
-    re_path(
-        r"^$", health_view, name='health'
-    ),
-    re_path(
-        r"^books/", book_view, name='books'
-    )
+    path('', HealthView.as_view(), name='health'),
+    path('', include(router.urls)),
 ]
-
-
