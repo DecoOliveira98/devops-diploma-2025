@@ -27,7 +27,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v5
         with:
-          images: ghcr.io/Endrius-Albert/bookcatalog
+          images: ghcr.io/DecoOliveira98/book_catalog
 
       - name: Build and push
         uses: docker/build-push-action@v6
