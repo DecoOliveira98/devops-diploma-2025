@@ -75,5 +75,5 @@ jobs:
         docker tag devops-diploma-2025-app ${{ secrets.DOCKER_USERNAME }}/devops-diploma-2025-app:latest
 
     - name: Push Docker image
-      run: |
+      run: | 
         docker push ${{ secrets.DOCKER_USERNAME}}/devops-diploma-2025-app:latest 
